@@ -21,7 +21,6 @@ pipeline{
             }
         }
 
-        // Add the Release stage here
 	stage('Release') {
 
 steps {
@@ -29,7 +28,6 @@ steps {
 sh '''
 
 oc project lolnyr-greetings
-
 oc start-build greeting-console --follow --wait
     }
 }
