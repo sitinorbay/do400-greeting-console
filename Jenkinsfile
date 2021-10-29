@@ -21,13 +21,13 @@ pipeline{
             }
         }
 
-	stage('Release') {
+	stage("Release"){
 
 steps {
-
 sh '''
 
-oc project lolnyr-greetings
-oc start-build greeting-console --follow --wait
+	oc project lolnyr-greetings
+	oc start-build greeting-console --follow --wait
+   '''
     }
 }
